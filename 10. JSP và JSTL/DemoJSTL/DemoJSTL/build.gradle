@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+    id 'war'
+}
+
+compileJava.options.encoding = 'UTF-8'
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    maven {
+        url 'https://repo.clojars.org'
+        name 'Clojars'
+    }
+}
+
+dependencies {
+    implementation group: 'javax.servlet', name: 'jstl', version: '1.2'
+    implementation group: 'javax.servlet', name: 'javax.servlet-api', version: '4.0.1'
+    implementation 'rate-gate:rate-gate:1.3.1'
+    implementation 'io.spinnaker.gate:gate:6.54.1'
+
+}
